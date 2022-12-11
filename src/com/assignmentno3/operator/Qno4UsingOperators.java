@@ -1,6 +1,4 @@
 package com.assignmentno3.operator;
-//- Write a program to add 8 to the number 2345 and then divide it by 3.
-//- Now, the modulus of the quotient is taken with 5 and then multiply the resultant value by 5.
 
 public class Qno4UsingOperators {
     public static void main(String[] args){
