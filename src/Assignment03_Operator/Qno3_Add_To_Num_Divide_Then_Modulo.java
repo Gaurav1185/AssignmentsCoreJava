@@ -10,5 +10,6 @@ public class Qno3_Add_To_Num_Divide_Then_Modulo {
         // System.out.println(original_Value+original_Value/3);
         System.out.println();
 
+
     }
 }
