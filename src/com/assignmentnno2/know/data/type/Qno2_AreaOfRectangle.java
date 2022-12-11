@@ -1,4 +1,4 @@
-package Assignment02_KnowDataType;
+package com.assignmentnno2.know.data.type;
 //Write a program to print the area of a rectangle
 public class Qno2_AreaOfRectangle {
     public static void main(String[] args) {

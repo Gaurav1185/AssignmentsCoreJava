@@ -1,4 +1,4 @@
-package Assignment01_LetsProgram;
+package com.assignmentno1.lets.program;
 
 public class Qno5_DifferenceAndProduct {
     public static void main(String[] args) {

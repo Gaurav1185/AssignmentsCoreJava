@@ -1,4 +1,4 @@
-package Assignment02_KnowDataType;
+package com.assignmentnno2.know.data.type;
 //Write a java program to print product of given number
 public class Qno3_PrintProduct {
     public static void main(String[] args) {

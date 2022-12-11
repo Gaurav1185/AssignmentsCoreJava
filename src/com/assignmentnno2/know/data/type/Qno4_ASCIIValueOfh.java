@@ -1,4 +1,4 @@
-package Assignment02_KnowDataType;
+package com.assignmentnno2.know.data.type;
 //Print the ASCII value of 'h'
 public class Qno4_ASCIIValueOfh {
     public static void main(String[] args) {

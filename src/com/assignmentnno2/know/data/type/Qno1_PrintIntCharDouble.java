@@ -1,4 +1,4 @@
-package Assignment02_KnowDataType;
+package com.assignmentnno2.know.data.type;
 //Write a java program to print an int, a double and a char on screen.
 public class Qno1_PrintIntCharDouble {
     public static void main(String[] args) {

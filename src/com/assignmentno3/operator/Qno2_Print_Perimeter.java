@@ -1,4 +1,4 @@
-package Assignment03_Operator;
+package com.assignmentno3.operator;
 //Write a program to calculate the perimeter of a triangle having sides of length 2,3 and 5 units.
 public class
 Qno2_Print_Perimeter {

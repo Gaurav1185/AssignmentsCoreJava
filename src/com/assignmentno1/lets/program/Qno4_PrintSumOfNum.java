@@ -1,4 +1,4 @@
-package Assignment01_LetsProgram;
+package com.assignmentno1.lets.program;
 
 public class Qno4_PrintSumOfNum {
     public static void main(String[] args) {

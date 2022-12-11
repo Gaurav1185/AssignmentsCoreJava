@@ -1,4 +1,4 @@
-package Assignment02_KnowDataType;
+package com.assignmentnno2.know.data.type;
 //Program for Printing the square of given number
 public class Qno8_Print_Square {
     public static void main(String[] args) {
