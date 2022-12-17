@@ -1,7 +1,7 @@
 package com.assignmentno3;
 import java.util.*;
 
-public class SumOfDigt {
+public class Qno13SumOfDigt {
 
 
     public static void main(String[] args) {
