@@ -1,4 +1,4 @@
-package com.assignmentno4.InputFromUser;
+package com.assignmentno6.InputFromUserNew;
 import java.util.Scanner;
 public class Qno4PrintGivenFields {
     public static void main(String[] args) {

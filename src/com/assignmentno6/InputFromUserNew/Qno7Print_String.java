@@ -1,4 +1,4 @@
-package com.assignmentno4.InputFromUser;
+package com.assignmentno6.InputFromUserNew;
 
 import java.util.Scanner;
 
