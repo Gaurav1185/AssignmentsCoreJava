@@ -1,6 +1,6 @@
 package Practise.StringHandling;
 
-public class InheritedClass extends Inheritance{
+public class InheritedClass extends InheritanceNEW {
     private int variableC;
 
     public int getVariableC() {
@@ -22,7 +22,7 @@ public class InheritedClass extends Inheritance{
     private int variableD;
 
     public static void main(String[] args) {
-        Inheritance inheritance=new InheritedClass();
+        InheritanceNEW inheritance=new InheritedClass();
         InheritedClass inheritedClass=new InheritedClass();
         inheritedClass.setVariableC(255);
         inheritedClass.setVariableD(654);

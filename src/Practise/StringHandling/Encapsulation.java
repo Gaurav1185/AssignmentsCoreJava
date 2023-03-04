@@ -37,4 +37,9 @@ public class Encapsulation {
     public void setStudentClass(String studentClass) {
         this.studentClass = studentClass;
     }
+
+//    public static void main(String[] args) {
+//        Encapsulation encapsulation=new Encapsulation();
+//
+//    }
 }
