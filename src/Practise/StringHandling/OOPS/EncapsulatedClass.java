@@ -1,4 +1,4 @@
-package Practise.StringHandling;
+package Practise.StringHandling.OOPS;
 
 public class EncapsulatedClass {
     public static void main(String[] args) {

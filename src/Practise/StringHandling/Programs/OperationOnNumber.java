@@ -1,4 +1,4 @@
-package Practise.StringHandling.Date20_02;
+package Practise.StringHandling.Programs;
 
 public class OperationOnNumber {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package com;
+package com.Multithreading;
 import java.util.Scanner;
 public class ArrayDeclaration {
     public static void main(String[] args) {

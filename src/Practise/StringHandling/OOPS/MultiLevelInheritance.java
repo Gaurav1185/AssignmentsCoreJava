@@ -1,4 +1,4 @@
-package Practise.StringHandling;
+package Practise.StringHandling.OOPS;
 
 public class MultiLevelInheritance {
     int variableA=1;

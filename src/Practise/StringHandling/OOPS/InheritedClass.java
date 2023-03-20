@@ -1,4 +1,4 @@
-package Practise.StringHandling;
+package Practise.StringHandling.OOPS;
 
 public class InheritedClass extends InheritanceNEW {
     private int variableC;
