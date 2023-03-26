@@ -1,0 +1,550 @@
+#Assignment : 28 Nov 2022 Monday
+Step 1: Download and install git https://git-scm.com/downloads
+Step 2: Create a account on github
+Step 3: Open git software
+Step 4: to copy the project from git to the local machine
+		git clone URL[https://github.com/javabysandeep/csj28]
+Step 5: Check the file changes in staging area
+		git status
+Step 6: Get the files update from remote : git pull
+
+# Commands
+git clone : copy the project from remote machine to local machine
+git status: to check the files in staging area
+git add: add the files from workspace to staging area
+git commit: add file from staging to local repository
+git push: add files from local to remote repo
+git pull : get the file from remote repo to local repo
+git fetch : get the file from local to workspace
+
+# variable and datatype
+variable: it is a name given to a memory location address so it becomes easy to store access manipulate
+
+    int age = 25;
+    //age is variable
+    //int datatype
+    //25 is the value
+
+
+__________________________________________________________________________________________________________________________________________________________________
+# variables : To store data or access the data which is already stored
+    # instance variable :
+     why to use
+     where they get the memory
+     how many times they get the memory
+     what are they?
+        - instance variables are the variables which are defined at class and
+            outside all class components
+            i.e. outside of method, constructor, blocks, nested class
+            without any static modifier
+
+        - to store data which is object specific.
+        - instance variables are stored inside the HEAP memory area
+        - instance variables will get the memory every time object is created
+
+    # static variable :
+     why to use
+     where they get the memory
+     how many times they get the memory
+     what are they?
+             - static variables are the variables which are defined at class and
+                 outside all class components
+                 i.e. outside of method, constructor, blocks, nested class
+                 with any static modifier
+
+         - to store data which is common for all objects.
+         - static variables are stored inside the class or method memory area
+         - will be stored only once
+
+# local variable :
+     what are they?
+         - local variables are the variables which are defined inside
+                of method, constructor, blocks, method parameter
+           with any static modifier
+     why to use
+     - to store data which is temporary calculations.
+     - this data is not specific to common to all objects
+
+     where they get the memory
+     - local variables are stored inside the STACK memory area
+
+     how many times they get the memory?
+     - will be stored everytime method, block, constructor is called.
+
+    whether local variables will get the default value?
+        - local variables must be initialized before they are used otherwise CTE.
+     - Local variables will not get default values. Developer is required to give initial or default value
+
+    How to use local variables?
+        - we define the variables inside the method/block/constructor
+        - we use them inside the same method/block/constructor
+        - we cannot access local variables outside
+        - to access local variables we don't need any reference variable, ot class name
+        - we access them directly
+
+
+# methods :
+    what:
+        - it is a group of statements enclosed inside the curly braces
+        - which has a name
+        - which might accept input parameters ()
+        - which might return some output values
+        - even though method does not return anything it is mandatory to write void
+        syntax:
+            return_type nameOfMethod (input parameters) {
+                //statements
+            }
+        e.g. 1. Method with no input no output
+                 void m1(){}
+
+        e.g. 2. Method with input no output
+                void method(int number1){ }
+
+        e.g. 3. Method with no input but returns output
+                int method(){
+                    return 1;
+                 }
+
+        e.g. 4. Method with  input and returns output
+                int add(int number1, int number2){
+                    return number1 + number2;
+                 }
+
+# Instance method:
+    What - it is a method created at class level outside of constructor, block, methods without static modifier
+       e.g.  int add(int number1, int number2){
+                      return number1 + number2;
+               }
+    Why: to represent object specific behaviour/task
+    How to access: we need reference variable to access instance method
+    ** We cant define method inside another method/constructor/block
+
+# static method:
+    What - it is a method created at class level outside of constructor, block, methods
+            with static modifier
+       e.g.  static int add(int number1, int number2){
+                      return number1 + number2;
+               }
+    Why: to represent behaviour/task common for all the objects
+    How to access: we need class name to access static method
+
+**** Non-static members [instance variable, instance method] cant be accessed from static method or static block
+
+
+
+
+
+
+
+
+
+# constructors: To build objects
+    default, zero, parameterized
+
+# blocks : to maintain non-initialization activities of an object [ when & how many objects are created]
+    instance, static
+
+# nested class : To group multiple class which are logically doing same task.
+    static, inner class, local inner class, anonymous class
+
+
+// Constructor:
+- why to use
+    - we need constructors to create/build/construct the objects
+    - object constructions is nothing but initialize the instance variables.
+    - constructor is used to put some default value for object
+
+- what is constructor?
+    - it is a special method which has same name as of class name
+    - this does not have any return type not even void
+    - no access modifier [static, final, abstract, synchronized...]
+    - constructor can accept the parameters[input]
+        - zero parameterized constructor: if constructor does not accept any parameters
+        - parmaterzied constructor: if constructor accepts the parameter
+    * we can have a normal java method which has same name as of class name.
+
+# Types of constructors
+1. default constructor
+    - it is a constructor provided by java compiler when developer does not provide any other constructor
+    - default constructor does not accept any parameters and does not have any implementation
+    - if developer provides any constructor then default constructor is not provided by java compiler
+
+2. zero parameterized constructor
+    - it does not accept any parameters
+    - but we can write the implementation [body] inside the curly braces
+    - it is provided by developer
+    - e.g.
+            class Student {
+                Student() {
+
+                }
+            }
+
+3. parameterized constructor
+    - it does accept parameters
+    - it is provided by developer
+    - but we can write the implementation [body] inside the curly braces
+    - e.g.
+                class Student {
+                    int id;
+                    String name;
+
+                    Student(int i, String s) {
+                    // assigning local variables to the instance variables
+                        id = i;
+                        name = s;
+                    }
+                }
+
+# how to access the constructor?
+- at the time object creation we call constructors
+    e.g.
+        Student student = new Student();// call to the constructor
+        Student student = new Student(1,"abc");// call to the param constructor
+
+__________________________________________________________________________________________________________________________________________________________________
+Blocks: - group of statements enclosed inside the curly braces
+- instance block:
+    - what is it ?: it is a block of code enclosed inside the curly braces at class level without static keyword
+    - syntax:
+            class Demo {
+                {
+                    //instance block
+                }
+    - why to use instance block:
+        - we use it to perform non-initialization activities such as maintaining no. of objects created, logging, auditing
+    - when instance block will be executed?
+        - every time object is created instance block will called
+
+- static block:
+    - what is it ?: it is a block of code enclosed inside the curly braces at class level with static keyword
+            }
+     - syntax:
+           class Demo {
+               static {
+                    //static block
+                }
+            }
+    - why to use static block: to perform one-time activity such as connecting to the database, server, loading the drivers
+    - when static block will be executed?
+        - it will be executed only once at the time of class loading
+
+Q. Order of execution between instance block, static block, constructor
+Ans. static block --> instance block --> constructor
+
+
+
+
+# nested classes:
+-what it is?
+    - a class which is created inside another class
+
+- types of nested classed:
+    - static nested class
+        - it is class defined inside another class with static modifier.
+        - syntax:
+                class A {
+                    static class B {
+
+                      }
+              }
+    - non-static nested class i.e. Inner class
+         - it is class defined inside another class without static modifier.
+        - syntax:
+                class A {
+                    // B is a Inner class
+                     class B {
+
+                      }
+                }
+
+    - Local Inner class
+        - it is a class which is defined inside the method without static modifier
+        - syntax :
+            class Demo {
+
+                PSVM(){
+                    class Local {}
+
+                }
+
+            }
+    - Anonymous class [abstract class and interface concept]
+
+
+# OOPS
+1. Encapsulation:
+- what is it?
+    - Encapsulation is a process of binding of data and methods which are acting on the data as a single unit.
+    - Data + Method
+- How to implement encapsulation?
+    - we make data members private
+    - we provide public methods for setting or getting the instance variables
+    - getters and setters
+- why do we need encapsulation?
+    - we need encapsulation to protect the data
+    - get better control on data
+- drawbacks
+    - lot of code
+    -
+
+#Inheritance
+Q. what is inheritance?
+   - It is a process of acquiring non-static, non-private & non-final members from one class to another class
+   - inheritance represents IS-A type of relationship
+
+Q. Why to use inheritance?
+    - It is used for code usability purpose
+
+Q. How to use Inheritance?
+   - by using extends keyword
+   - We define common data and methods in a class so that it can be reused. Such class is called as Parent/Super/Base
+   - We create another class and use extends keyword along with the base class.
+   e.g. // Base/Parent/Super class
+        public class Loan {
+            //common data
+            int loadId;
+            int loanAmount
+            int rateOfInterest;
+            int loanDuration;
+            String borrowerName;
+
+            // common methods
+            void apply(){}
+            void checkLoanEligibility(){}
+            void calculateInterestPayment(){}
+
+        }
+
+        // Child/Sub/Derived class
+        class PersonalLoan extends Loan {}
+
+# Polymorphism:
+- What it is?
+    - It is an ability of an object to changes its behaviour either at compile time or run time.
+    - Poly - many
+    - morph - forms/methods/behaviour/task/function
+
+-  How to achieve polymorphism?
+    - We achieve polymorphism with the help of method overloading and method overriding
+
+- Types of Polymorphism:
+    - Compile time Polymorphism / static binding / early biding [Method overloading]
+    - runtime time Polymorphism / dynamic binding / late biding [Method overriding]
+
+- What is binding?
+    - It is a process of deciding which method will be called at the time of execution
+
+# What is method overloading?
+- It is a process of defining multiple methods with
+    - the same name
+    - but different signature in the same class or in the child class
+- In method overloading return type of the method will not be considered.
+
+# can we overload final, static, private methods?
+    - We can overload
+
+# can we overload main method?
+    - Yes we can
+
+# can we overload constructor?
+   - Yes we can
+
+# What is method overriding?
+- It is a process of defining a method in the child class with
+    - same name
+    - same return type
+    - same signature
+    - same or more relaxed access specifier
+    as of parent class method.
+
+- In method overriding  return type of the method will be considered.
+
+# can we override final, static, private methods?
+    - No.
+
+# can we override main method?
+    - No.
+
+# can we override constructor?
+   - No.
+
+# Final keyword
+- final keyword can be applied on variable, methods and classes
+- final variable cant be reassigned the value
+- final methods cannot be overriden
+- final class cannot be extended.
+
+
+# Immutable class:
+- If a class is made immutable then its object state/content can't be changed once object is created.
+
+- How to make immutable class?
+    - We make class as final
+    - make data members private
+    - do not provide any public setters.
+
+- String class and all other wrapper classes [Byte, Short, Integer, Long, Character, Float, Double, Boolean]
+ are immutable classes.
+
+# Abstraction :
+
+
+# Array:
+- what: it is a collection of homogenenous elements which are stored in continuous/sequential memory locations
+
+- why : we use array to store multiple values of same type
+
+- how to create an array
+    - way 1: dataType [] arrayVariableName = new dataType[sizeOfArray];
+    - way 2: dataType [] arrayVariableName = {values separated by comma};
+    - way 3:
+            - dataType [] arrayVariableName;
+            - arrayVariableName = new dataType[sizeOfArray];
+
+# How to access array elements?
+- We access the array elements with the help of array index.
+- array index starts from zero [why array index starts from zero]
+- base address: it is where array's first element is stored.
+- index: it is a measure of how far the element is from first element i.e. base address
+- to calculate the memory location of any given element in the given array
+     BASE_ADDRESS + DATA_TYPE_SIZE * INDEX;
+
+-  int[] array = {1,2,3}; SOP(array[0])
+
+
+# File Handling [java.io package]
+1. File
+
+- Byte Oriented Streams
+2. InputStream
+    - FileInputStream
+    - BufferedInputStream
+    - ObjectInputStream
+3. OutputStream
+    - FileOutputStream
+    - BufferedOutputStream
+    - ObjectOutputStream
+
+- character oriented streams
+1. Reader
+    - FileReader
+    - BufferedReader
+2. Writer
+    - FileWriter
+    - BufferedWriter
+
+# File
+  - It represents physical files in java object format
+  - With the help of file class we can
+    - create new file
+    - create new folder/directory
+    - delete file
+    - delete folder/directory
+    - rename file
+    - rename folder/directory
+    - get the path of file/directory
+        - relative
+        - absolute
+    - get the size/length of a file
+    - can set the file/folder permissions
+    - can get the file/folder permissions
+    - check file or folder exists
+    - check whether file is empty or not
+    - can get or set the last modified time.
+    - can get or set the created time.
+    - list the file names in a given folder
+    - list the file in a given folder
+    - filter the files in a given folder
+*** With File class we don't have methods for reading and writing purpose
+
+
+-------------------------------------------------------
+Read from a file directly in terms of bytes : FileInputStream
+Write to a file directly in terms of bytes : FileOutputStream
+Read from a buffer directly in terms of bytes : BufferedInputStream
+Write to a buffer directly in terms of bytes : BufferedOutputStream
+
+
+# Serialization : It is a process of writing java objects permanently on the file
+# De-Serialization : It is a process of reading java object from the file
+# To perform serialization or deserialization we have to implement Serialzable Interface
+- Serialzable(I) : marker interface
+NotSerializableException : will get this exception if we try to serailize an object which is not of ty
+
+# Functional interfaces:
+    - it is a java 8 feature
+    - it is an interface which contains single abstract method
+    - it can contain any number of default methods
+    - it can contain any number of static methods
+    - on functional interface we annotate the interface with @FunctionalInterface
+    - @FunctionalInterface makes sure that interfaces has Single abstract method otherwise it gives compile time error
+    e.g.
+        @FunctionalInterface
+        public interface I1 {
+            int add(int number1, int number2);
+        }
+
+# Lambda Expression:
+Q. why to use lambda expression?
+- We use Lambda expression to implement functional interface only
+- With the lambda we can write concise and short code
+- Lambda expression reduces the code length
+
+Q. What is a Lambda expression?
+- It is an anonymous function which does not have
+    - name
+    - return type
+    - access modifiers
+  which is used to implement functional interface.
+
+--------------------------------------------------------
+Examples for Lambda Expressions:
+
+1. Runnable runnable = () -> System.out.println("Hello, world!");
+
+
+2. Function<Integer, Integer> square = (num) -> num * num;
+
+
+3. BiFunction<Integer, Integer, Integer> sum = (num1, num2) -> num1 + num2;
+
+
+4. Predicate<String> isLong = (str) -> str.length() > 10;
+
+5. List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5);
+        numbers.forEach((num) -> System.out.println(num));
+
+______________________________________________________________________
+
+Exception in one thread will not cause abnormal termination for other thread
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
